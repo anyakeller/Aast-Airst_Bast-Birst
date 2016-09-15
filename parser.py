@@ -7,7 +7,7 @@ for line in splitString:
     if len(line)>0 and line[0]=='"':
         line = line[1:]
         dict[line[0:line.index('"')]]=float(line[line.index('"')+2:])
-    elif len(line)>0 and line!='Job Class,Percentage':
+    elif len(line)>0 and splitString.index(line)!=0:
         print line
         dict[line[0:line.index(',')]]=float(line[line.index(',')+1:])
         
