@@ -4,10 +4,12 @@ splitString = str.split(stringthing, "\r\n")
 dict = {}
 
 for line in splitString:
-    if line[0] == '"':
+    if len(line)>0 and line[0]=='"':
         line = line[1:]
+        dict[line[0:line.index('"')]]=float(line[line.index('"')+2:])
+    elif len(line)>0 and line!='Job Class,Percentage':
+        print line
+        dict[line[0:line.index(',')]]=float(line[line.index(',')+1:])
         
-        
-
-print(s)
+print dict
 file.close()
