@@ -42,13 +42,14 @@ def quickText():
 	counter=0
 	while (counter < 10000):
 		counter+=1
-		results[getRandomOccupation()] = results[getRandomOccupation()]+1
+		rand = getRandomOccupation()
+		results[rand] = results[rand]+1
 	output = ""
 	for key in results:
 		output+=key+" happend "+(str)(results[key])+"/10000 times\n"#key in results is the name of proffesion
 	return output
 
-print getRandomOccupation()
+#print getRandomOccupation()
 
 print quickText()
 
