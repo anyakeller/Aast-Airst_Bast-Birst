@@ -32,8 +32,24 @@ def getRandomOccupation():
 		if temp == 859:
 			return dict[key]
 
+#To Test
+def quickText():
+	results = {}
+	#lengthHold = len(dict)
+	#while (lengthHold > 0):
+	for key in dict:
+		results[dict[key]]=0
+	counter=0
+	while (counter < 10000):
+		counter+=1
+		results[getRandomOccupation()] = results[getRandomOccupation()]+1
+	output = ""
+	for key in results:
+		output+=key+" happend "+(str)(results[key])+"/10000 times\n"#key in results is the name of proffesion
+	return output
+
 print getRandomOccupation()
 
-
+print quickText()
 
 file.close()
