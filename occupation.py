@@ -29,6 +29,8 @@ def getRandomOccupation():
 		temp += 10 * key
 		if r < temp:
 			return dict[key]
+		if temp == 859:
+			return dict[key]
 
 print getRandomOccupation()
 
